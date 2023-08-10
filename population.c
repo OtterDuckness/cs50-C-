@@ -28,14 +28,14 @@ int main(void)
             b = size / 3;
             d = size / 4;
             size = size + b - d;
-            n ++ ;
+            n++;
         }
         while (size < ends);
         // printf("Years: %i\n", n);
     }
     else
     {
-    // TODO: Print number of years
+        // TODO: Print number of years
         // printf("Years: %i\n", n);
     }
     printf("Years: %i\n", n);
