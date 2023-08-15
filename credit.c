@@ -26,18 +26,21 @@ int main(void)
     }
 
     int sum = y + z;
+    long biga = 10000000000000;
+    long bigm = 100000000000000;
+    long bigv = 1000000000000;
+    long bigbigv = 1000000000000000;
     if (sum % 10 == 0) // checking if valid
     {
-        if (cnum / 10000000000000 == 34 || cnum / 10000000000000 == 37) // amex
+        if (cnum / biga == 34 || cnum / biga == 37) // amex
         {
             printf("AMEX\n");
         }
-        else if (cnum / 100000000000000 == 51 || cnum / 100000000000000 == 52 || cnum / 100000000000000 == 53 ||
-                 cnum / 100000000000000 == 54 || cnum / 100000000000000 == 55) // mastercard
+        else if (cnum / bigm == 51 || cnum / bigm == 52 || cnum / bigm == 53 || cnum / bigm == 54 || cnum / bigm == 55) // mastercard
         {
             printf("MASTERCARD\n");
         }
-        else if (cnum / 1000000000000 == 4 || cnum / 1000000000000000 == 4) // visa
+        else if (cnum / bigv == 4 || cnum / bigbigv == 4) // visa
         {
             printf("VISA\n");
         }
