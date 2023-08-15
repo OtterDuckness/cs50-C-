@@ -5,7 +5,6 @@ int main(void)
 {
     //number input
     long cnum = get_long ("Card number without spaces or slashes: ");
-
     long x = cnum;
 
     //luhns voodoo
@@ -13,10 +12,10 @@ int main(void)
     int b;
     int y;
     int z;
-    while (x > 0)  //
+    while (x > 0)
     {
-        a = (x % 100) / 10 * 2;  //evens from the back to front
-        b = (x % 10);  //odds from the back to front
+        a = (x % 100) / 10 * 2;  //evens from back to front
+        b = (x % 10);  //odds from back to front
         if (a > 9)  //in case of a double-digit even
         {
             a = a % 10 + (a / 10) % 10;
@@ -25,8 +24,7 @@ int main(void)
         z = b + z;  //sum of odds
         x = x / 100;
     }
-    // printf("%i\n", y);
-    // printf("%i\n", z);
+
     int sum = y + z;
     if (sum % 10 == 0)  //checking if valid
     {
