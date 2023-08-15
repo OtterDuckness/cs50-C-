@@ -43,7 +43,7 @@ int get_cents(void)
     {
         a = get_int("How many cents? ");
     }
-    while (a < 0 || a > 100);
+    while (a < 0);
     return a;
 }
 
