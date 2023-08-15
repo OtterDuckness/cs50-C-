@@ -4,7 +4,7 @@
 int main(void)
 {
     // number input
-    long cnum = get_long("Card number without spaces or slashes: ");
+    long cnum = get_long("Number: ");
     long x = cnum;
 
     // luhns voodoo
