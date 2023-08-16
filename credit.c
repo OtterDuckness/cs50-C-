@@ -36,7 +36,8 @@ int main(void)
         {
             printf("AMEX\n");
         }
-        else if (cnum / bigm == 51 || cnum / bigm == 52 || cnum / bigm == 53 || cnum / bigm == 54 || cnum / bigm == 55) // mastercard
+        else if (cnum / bigm == 51 || cnum / bigm == 52 || cnum / bigm == 53 || cnum / bigm == 54 ||
+                 cnum / bigm == 55) // mastercard
         {
             printf("MASTERCARD\n");
         }
