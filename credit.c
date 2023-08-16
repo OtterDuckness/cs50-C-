@@ -28,8 +28,8 @@ int main(void)
     int sum = y + z;
     long biga = 10000000000000;
     long bigm = 100000000000000;
-    long bigv = 1000000000000;
-    long bigbigv = 1000000000000000;
+    long smolv = 1000000000000;
+    long bigv = 1000000000000000;
     if (sum % 10 == 0) // checking if valid
     {
         if (cnum / biga == 34 || cnum / biga == 37) // amex
@@ -40,7 +40,7 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
-        else if (cnum / bigv == 4 || cnum / bigbigv == 4) // visa
+        else if (cnum / smolv == 4 || cnum / bigv == 4) // visa
         {
             printf("VISA\n");
         }
