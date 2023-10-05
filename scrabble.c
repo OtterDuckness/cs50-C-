@@ -49,7 +49,7 @@ int compute_score(string word)
         {
             word[i] = tolower(word[i]);
         }
-        //check the letter against the alphabet
+        //check the letter against the alphabetstyle50 scrabble.cstyle50 scrabble.c
         for (int j = 0; j < lengtha; j++)
         {
             if (word[i] == alphabet[j])
