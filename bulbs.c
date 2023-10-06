@@ -9,7 +9,7 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
-    string message = get_string("Message? ");
+    string message = get_string("Message: ");
     int length = strlen(message);
     int binrev[BITS_IN_BYTE];
     int bin[BITS_IN_BYTE];
@@ -18,7 +18,7 @@ int main(void)
     for (int i = 0; i < length; i++)
     {
         //setting up the following loop
-        binrev[0] = message[i] % 2; 
+        binrev[0] = message[i] % 2;
         n[0] = message[i];
         //converting decimal into  reverse binary
         for (int j = 1; j < BITS_IN_BYTE; j ++)
@@ -29,9 +29,8 @@ int main(void)
         // changing reverse binary into proper binary
         for (int y = 0; y < BITS_IN_BYTE; y++ )
         {
-        bin[y] = binrev[BITS_IN_BYTE - 1 - y];
-        print_bulb(bin[y]);
-
+            bin[y] = binrev[BITS_IN_BYTE - 1 - y];
+            print_bulb(bin[y]);
         }
         printf("\n");
     }
