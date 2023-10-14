@@ -18,6 +18,7 @@ int main(int argc, string argv[])
     else if (only_digits(argv[1]) != 1)
     {
         printf("Usage: ./caesar key\n");
+        return 1;
     }
     int key = atoi(argv[1]);
     string plain = get_string("plaintext: ");
