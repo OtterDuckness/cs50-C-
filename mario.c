@@ -1,31 +1,40 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void row_length(int spaces, int bricks);
+
 int main(void)
 {
-    int height;
+    int size;
     do
     {
-        height = get_int("What's the height? ");
+        size = get_int("How big is the pyramid? ");
     }
-    while (height < 1 || height > 8);
-
-    for (int i = 1; i <= height; i++)
+    while (size < 1 || size > 8);
+    for (int i = 1; i <= size; i++)
     {
-        for (int x = height; x > i; x--)
-        {
-            printf(" ");
-        }
-        for (int j = 1; j <= i; j++)
-        {
-            printf("#");
-        }
-        printf("  ");
-        for (int j = 1; j <= i; j++)
-        {
-            printf("#");
-        }
-
-        printf("\n");
+        row_length(size - i, i);
     }
+}
+
+void row_length(int spaces, int bricks)
+{
+    for (int j = 0; j < spaces; j++)
+    {
+        printf(" ");
+    }
+    for (int h = 0; h < bricks; h++)
+    {
+        printf("#");
+    }
+    printf("  ");
+    for (int h = 0; h < bricks; h++)
+    {
+        printf("#");
+    }
+    // for (int j = 0; j < spaces; j++)
+    // {
+    //     printf(" ");
+    // }
+    printf("\n");
 }
