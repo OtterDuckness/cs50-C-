@@ -18,7 +18,7 @@ int main(void)
         b = (x % 10);           // odds from back to front
         if (a > 9)              // in case of a double-digit even
         {
-            a = a % 10 + (a / 10) % 10;
+            a = a % 10 + (a / 10);
         }
         y = a + y; // sum of evens
         z = b + z; // sum of odds
