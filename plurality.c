@@ -84,7 +84,7 @@ void print_winner(void)
 {
     // TODO
     int hvotes = 0;
-    for (int i = 0; i < (candidate_count-1); i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if ((candidates[i].votes >= candidates[i+1].votes) && (candidates[i].votes >= hvotes))  //goes through candidates and checks if new max vote is higher than the previous
         {
