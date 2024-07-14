@@ -152,7 +152,7 @@ void tabulate(void)
             }
             else
             {
-                break;
+                j++;
             }
         }
     }
