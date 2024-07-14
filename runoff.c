@@ -65,7 +65,6 @@ int main(int argc, string argv[])
     // Keep querying for votes
     for (int i = 0; i < voter_count; i++)
     {
-
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
@@ -147,11 +146,11 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (candidates[preferences[i][j]].eliminated == false)
+            while (candidates[preferences[i][j]].eliminated == true)
             {
-               candidates[preferences[i][j]].votes++;
+                j++;
             }
-
+            candidates[preferences[i][j]].votes++;
             break;
         }
     }
