@@ -10,10 +10,10 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
        for (int j = 0; j < width; j++)
        {
         int average = 0;
-        average = (image[i][j].rgbtRed + image[i][j].rgbtBlue + image[i][j].rgbtGreen)/3;
-        image[i][j].rgbtRed = round(average);
-        image[i][j].rgbtBlue = round(average);
-        image[i][j].rgbtGreen = round(average);
+        average = round((image[i][j].rgbtRed + image[i][j].rgbtBlue + image[i][j].rgbtGreen)/3.0);
+        image[i][j].rgbtRed = average;
+        image[i][j].rgbtBlue = average;
+        image[i][j].rgbtGreen = average;
        }
     }
     return;
@@ -84,6 +84,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            // if ()
             int averageRed = 0;
             averageRed = (copy[i-1][j-1].rgbtRed + copy[i-1][j].rgbtRed + copy[i-1][j+1].rgbtRed + copy[i+1][j-1].rgbtRed + copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed + copy[i][j-1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed)/9;
             int averageGreen = 0;
