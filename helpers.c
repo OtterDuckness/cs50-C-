@@ -91,9 +91,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 int averageBlue = 0;
                 averageBlue = (copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue)/4;
 
-                image[i][j].rgbtRed = averageRed;
-                image[i][j].rgbtGreen = averageGreen;
-                image[i][j].rgbtBlue = averageBlue;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
             }
             else if (i == 0 && j != 0)
             {
@@ -104,9 +104,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 int averageBlue = 0;
                 averageBlue = (copy[i+1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue + copy[i][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue)/6;
 
-                image[i][j].rgbtRed = averageRed;
-                image[i][j].rgbtGreen = averageGreen;
-                image[i][j].rgbtBlue = averageBlue;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
             }
             else if (i != 0 && j == 0)
             {
@@ -117,9 +117,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 int averageBlue = 0;
                 averageBlue = (copy[i-1][j].rgbtBlue + copy[i-1][j+1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue)/6;
 
-                image[i][j].rgbtRed = averageRed;
-                image[i][j].rgbtGreen = averageGreen;
-                image[i][j].rgbtBlue = averageBlue;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
             }
             else
             {
@@ -130,9 +130,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 int averageBlue = 0;
                 averageBlue = (copy[i-1][j-1].rgbtBlue + copy[i-1][j].rgbtBlue + copy[i-1][j+1].rgbtBlue + copy[i+1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue + copy[i][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue)/9;
 
-                image[i][j].rgbtRed = averageRed;
-                image[i][j].rgbtGreen = averageGreen;
-                image[i][j].rgbtBlue = averageBlue;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
             }
         }
     }
