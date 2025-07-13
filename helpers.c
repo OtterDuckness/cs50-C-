@@ -85,7 +85,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             if (i == 0 && j == 0)
             {
                 int averageRed = 0;
-                averageRed = (copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed)/4;
+                averageRed = round(copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed)/4;
                 int averageGreen = 0;
                 averageGreen = (copy[i+1][j].rgbtGreen + copy[i+1][j+1].rgbtGreen+ copy[i][j].rgbtGreen + copy[i][j+1].rgbtGreen)/4;
                 int averageBlue = 0;
