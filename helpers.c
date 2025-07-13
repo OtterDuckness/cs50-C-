@@ -78,21 +78,27 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     // return;
     }
-    for (int i = 0; i < height; i++)
+    for (int i = 1; i < height - 1; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 1; j < width - 1; j++)
         {
-            // if ()
-            int averageRed = 0;
-            averageRed = (copy[i-1][j-1].rgbtRed + copy[i-1][j].rgbtRed + copy[i-1][j+1].rgbtRed + copy[i+1][j-1].rgbtRed + copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed + copy[i][j-1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed)/9;
-            int averageGreen = 0;
-            averageGreen = (copy[i-1][j-1].rgbtGreen + copy[i-1][j].rgbtGreen + copy[i-1][j+1].rgbtGreen + copy[i+1][j-1].rgbtGreen + copy[i+1][j].rgbtGreen + copy[i+1][j+1].rgbtGreen + copy[i][j-1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j+1].rgbtGreen)/9;
-            int averageBlue = 0;
-            averageBlue = (copy[i-1][j-1].rgbtBlue + copy[i-1][j].rgbtBlue + copy[i-1][j+1].rgbtBlue + copy[i+1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue + copy[i][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue)/9;
+            // if
+            {
+                int averageRed = 0;
+                averageRed = (copy[i-1][j-1].rgbtRed + copy[i-1][j].rgbtRed + copy[i-1][j+1].rgbtRed + copy[i+1][j-1].rgbtRed + copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed + copy[i][j-1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed)/9;
+                int averageGreen = 0;
+                averageGreen = (copy[i-1][j-1].rgbtGreen + copy[i-1][j].rgbtGreen + copy[i-1][j+1].rgbtGreen + copy[i+1][j-1].rgbtGreen + copy[i+1][j].rgbtGreen + copy[i+1][j+1].rgbtGreen + copy[i][j-1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j+1].rgbtGreen)/9;
+                int averageBlue = 0;
+                averageBlue = (copy[i-1][j-1].rgbtBlue + copy[i-1][j].rgbtBlue + copy[i-1][j+1].rgbtBlue + copy[i+1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue + copy[i][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue)/9;
 
-            image[i][j].rgbtRed = averageRed;
-            image[i][j].rgbtGreen = averageGreen;
-            image[i][j].rgbtBlue = averageBlue;
+                image[i][j].rgbtRed = averageRed;
+                image[i][j].rgbtGreen = averageGreen;
+                image[i][j].rgbtBlue = averageBlue;
+            }
+            // // else
+            // {
+
+            // }
         }
     }
 }
