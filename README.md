@@ -72,7 +72,7 @@ This repo covers the early part — where things are harder, lower-level, and ho
 
 ## 🧑‍💻 Author
 
-- GitHub: https://github.com/OtterDuckness
+Mikhail Tolubaev
 
 ___________________________________________________________________________________________________________________________________________________
 # Proyectos de CS50 en C 💻
@@ -146,17 +146,7 @@ Este repositorio cubre la parte inicial — donde todo es más difícil, más ce
 
 ---
 
-## 📈 Progreso
-
-Empecé con:  
-> “¿Por qué esto no compila?”
-
-Ahora:  
-> “Vale… sé por qué esto no compila.”
-
----
-
 ## 🧑‍💻 Autor
 
-- GitHub: https://github.com/OtterDuckness
+Mikhail Tolubaev
 
